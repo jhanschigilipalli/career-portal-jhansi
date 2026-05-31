@@ -35,5 +35,5 @@ export function getApiBaseUrl() {
   if (fromEnv && String(fromEnv).trim() !== "") {
     return resolveDevApiUrl(fromEnv);
   }
-  return "https://career-portal-backend-live.onrender.com";
+  return "https://career-portal-jhansi-production.up.railway.app";
 }
