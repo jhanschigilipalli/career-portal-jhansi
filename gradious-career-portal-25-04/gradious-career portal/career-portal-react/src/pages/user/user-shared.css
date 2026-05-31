@@ -1,0 +1,62 @@
+:root {
+  --user-primary: #0d9488;
+  --user-primary-dark: #0f766e;
+  --user-primary-light: #2dd4bf;
+  --user-text: #1e293b;
+  --user-text-muted: #64748b;
+  --user-border: #e2e8f0;
+  --user-surface: #ffffff;
+  --user-surface-muted: #fafaf9;
+  --user-radius: 14px;
+  --user-shadow: 0 1px 3px rgba(28, 25, 23, 0.06);
+}
+
+.user-module-panel {
+  background: var(--user-surface);
+  border-radius: var(--user-radius);
+  padding: 24px;
+  border: 1px solid var(--user-border);
+  box-shadow: var(--user-shadow);
+}
+
+.page-loader {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--user-surface);
+  border-radius: var(--user-radius);
+  border: 1px solid var(--user-border);
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--user-border);
+  border-top: 3px solid var(--user-primary);
+  border-radius: 50%;
+  animation: user-spin 0.8s linear infinite;
+}
+
+.loader-text {
+  margin-top: 12px;
+  color: var(--user-text-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@keyframes user-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.empty-text,
+.jobs-empty-state,
+.myapps-empty-state {
+  background: var(--user-surface);
+  border-radius: var(--user-radius);
+  border: 1px solid var(--user-border);
+  color: var(--user-text-muted);
+}

@@ -1,0 +1,195 @@
+.profile-page {
+  padding: 28px;
+  background: var(--recruiter-surface, #ffffff);
+  border-radius: var(--recruiter-radius, 14px);
+  box-shadow: var(--recruiter-shadow, 0 1px 3px rgba(28, 25, 23, 0.06));
+  border: 1px solid var(--recruiter-border, #e2e8f0);
+}
+
+.loading {
+  background: var(--recruiter-surface, #ffffff);
+  border-radius: var(--recruiter-radius, 14px);
+  padding: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--recruiter-text, #1e293b);
+  border: 1px solid var(--recruiter-border, #e2e8f0);
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--recruiter-text, #1e293b);
+  letter-spacing: -0.02em;
+}
+
+.edit-btn {
+  border: none;
+  background: var(--recruiter-primary, #0d9488);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.edit-btn:hover {
+  background: var(--recruiter-primary-dark, #0f766e);
+  transform: translateY(-1px);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.profile-card {
+  background: var(--recruiter-surface-muted, #fafaf9);
+  border: 1px solid var(--recruiter-border, #e2e8f0);
+  border-radius: 12px;
+  padding: 18px 20px;
+  min-height: 88px;
+}
+
+.profile-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--recruiter-text-muted, #64748b);
+}
+
+.profile-card p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--recruiter-text, #1e293b);
+  word-break: break-word;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status.active {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.status.blocked {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.profile-form {
+  margin-top: 6px;
+}
+
+.profile-form .profile-card {
+  padding: 0;
+  background: transparent;
+  border: none;
+  min-height: auto;
+}
+
+.profile-form .profile-card label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--recruiter-text, #1e293b);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.profile-form .profile-card input {
+  width: 100%;
+  height: 44px;
+  border: 1.5px solid var(--recruiter-border, #e2e8f0);
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 14px;
+  color: var(--recruiter-text, #1e293b);
+  outline: none;
+  background: #ffffff;
+}
+
+.profile-form .profile-card input:focus {
+  border-color: var(--recruiter-primary, #0d9488);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12);
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.save-btn {
+  border: none;
+  background: var(--recruiter-primary, #0d9488);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: var(--recruiter-primary-dark, #0f766e);
+}
+
+.cancel-btn {
+  border: none;
+  background: #e2e8f0;
+  color: var(--recruiter-text, #1e293b);
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .edit-btn,
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
